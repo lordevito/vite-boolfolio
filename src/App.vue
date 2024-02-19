@@ -1,40 +1,15 @@
 <script>
 //importo AppHeader
 import AppHeader from "./components/AppHeader.vue";
-//importo AppMain
-import AppMain from "./components/AppMain.vue";
-//importo axios
-import axios from "axios";
+//importo ProjectCard
+import ProjectCard from "./components/ProjectCard.vue";
+
 export default {
   name: "Boolfolio",
-  data() {
-    return {
-      baseUrl: "http://127.0.0.1:8000",
-      apiUrls: {
-        projects: "/api/projects",
-      },
-      projects: [],
-    };
-  },
+ 
   components: {
     AppHeader,
-    AppMain,
-  },
-  methods: {
-    getProjects() {
-      axios
-        .get(this.baseUrl + this.apiUrls.projects)
-        .then((response) => {
-          console.log(response.data.data);
-          this.projects = response.data.data;
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    },
-  },
-  created() {
-    this.getProjects();
+    ProjectCard
   },
 };
 </script>
@@ -43,6 +18,7 @@ export default {
   <AppHeader />
   <!--<AppMain :projects="projects" />-->
   <router-view></router-view>
+
 </template>
 
 <style></style>

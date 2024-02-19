@@ -10,7 +10,7 @@ export default {
       <nav>
         <ul class="list-unstyled p-0 m-0 d-flex gap-4">
           <li><router-link :to="{ name: 'home' }">Home</router-link></li>
-          <li><router-link :to="{ name: 'project' }">Project</router-link></li>
+          <li><router-link :to="{ name: 'projects' }">Project</router-link></li>
           <li><router-link :to="{ name: 'about' }">About</router-link></li>
         </ul>
       </nav>

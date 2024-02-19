@@ -12,7 +12,7 @@ export default {
         <p class="card-text">
           {{ project.description.substring(0, 180) }}
         </p>
-        <a href="#" class="btn btn-primary">Dettagli</a>
+        <router-link :to="{ name: 'single-project', params: { slug: project.slug } }" class="btn btn-primary">Dettagli</router-link>
       </div>
     </div>
   </main>
